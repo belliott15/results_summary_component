@@ -1,0 +1,23 @@
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.overall {
+  background-color: hsl(252, 100%, 67%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+  border-radius: 20px;
+}
+.breakdown {
+  background-color: bisque;
+  border-radius: 20px;
+}
