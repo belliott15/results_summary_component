@@ -16,23 +16,41 @@
     <title>Frontend Mentor | Results summary component</title>
   </head>
   <body>
-    <section>
+    <section class="container">
       <!-- left side -->
-      <div>
+      <div class="overall">
         <span>Your Result </span>
-        <div>
-          <h1>76</h1>
-          <p>of 100</p>
+        <div class="round">
+          <p><h1>76</h1> of 100</p>
         </div>
-        <p>
-          Great You scored higher than 65% of the people who have taken these
+        <h1>Great!</h1>
+        <p class="">
+          You scored higher than 65% of the people who have taken these
           tests.
         </p>
       </div>
       <!-- right side -->
-      <div>
-        Summary Reaction 80 / 100 Memory 92 / 100 Verbal 61 / 100 Visual 72 /
-        100 Continue
+      <div class="breakdown">
+        <h1>Summary</h1>
+        <div class="card">
+          <p>Reaction</p>
+          <p>80 / 100</p>
+        </div>
+        <div class="card">
+          <p>Memory</p>
+          <p>92 / 100</p>
+        </div>   
+        <div class="card">
+          <p>Verbal</p>
+          <p>61 / 100</p> 
+        </div>
+        <div class="card">
+          <p>Visual</p> 
+          <p>72 /100</p>
+        </div> 
+        <button class="button">
+          Continue
+        </button> 
       </div>
     </section>
 
