@@ -1,4 +1,4 @@
-.attribution {
+import .attribution {
   font-size: 11px;
   text-align: center;
 }
@@ -8,16 +8,70 @@
 .container {
   display: grid;
   grid-template-columns: 1fr 1fr;
+  box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.52);
+  border-radius: 20px;
+  margin: 10%;
+  max-width: 600px;
 }
 .overall {
-  background-color: hsl(252, 100%, 67%);
+  background: linear-gradient(hsl(252, 100%, 67%), hsl(241, 81%, 54%));
   display: flex;
   flex-direction: column;
   align-items: center;
   color: white;
   border-radius: 20px;
+  justify-content: space-around;
 }
+.round {
+  background: linear-gradient(hsla(256, 72%, 46%, 1), hsla(241, 72%, 46%, 0));
+  height: 150px;
+  width: 150px;
+  border-radius: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: smaller;
+  color: rgb(159, 159, 159);
+  box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.32);
+}
+.round h1 {
+  font-size: 3rem;
+  margin: 0;
+  padding: 0%;
+  color: white;
+}
+
+.footer {
+  font-size: smaller;
+  color: rgb(205, 203, 203);
+  font-size: 0.75em;
+  max-width: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .breakdown {
-  background-color: bisque;
+  background-color: white;
   border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  padding: 10%;
+}
+.card {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 0px 12px;
+  background: beige;
+  border-radius: 10%;
+  margin: 2%;
+}
+.button {
+  border-radius: 20px;
+  background: linear-gradient(hsl(241, 81%, 54%), hsl(241, 81%, 54%));
+  padding: 8px;
+  color: white;
+  max-width: 200px;
 }
