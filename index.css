@@ -68,8 +68,20 @@ body {
   margin: 2%;
   min-width: 175px;
 }
-.card div {
+.card span {
   display: flex;
+}
+.reaction {
+  color: #f55;
+}
+.memory {
+  color: #ffb21e;
+}
+.verbal {
+  color: #00bb8f;
+}
+.visual {
+  color: #1125d6;
 }
 .button {
   border-radius: 20px;
@@ -77,6 +89,10 @@ body {
   padding: 8px;
   color: white;
   min-width: 200px;
+}
+.button:hover {
+  cursor: pointer;
+  background: linear-gradient(hsl(241, 81%, 54%), hsl(241, 81%, 54%));
 }
 .attribution {
   font-size: 11px;
