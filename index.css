@@ -1,9 +1,7 @@
-import .attribution {
-  font-size: 11px;
-  text-align: center;
-}
-.attribution a {
-  color: hsl(228, 45%, 44%);
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 .container {
   display: grid;
@@ -11,16 +9,17 @@ import .attribution {
   box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.52);
   border-radius: 20px;
   margin: 10%;
-  max-width: 600px;
+  max-width: 800px;
+  min-width: 600px;
 }
 .overall {
   background: linear-gradient(hsl(252, 100%, 67%), hsl(241, 81%, 54%));
   display: flex;
   flex-direction: column;
   align-items: center;
-  color: white;
   border-radius: 20px;
   justify-content: space-around;
+  color: white;
 }
 .round {
   background: linear-gradient(hsla(256, 72%, 46%, 1), hsla(241, 72%, 46%, 0));
@@ -43,21 +42,21 @@ import .attribution {
 }
 
 .footer {
-  font-size: smaller;
+  text-align: center;
   color: rgb(205, 203, 203);
-  font-size: 0.75em;
   max-width: 200px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
 .breakdown {
   background-color: white;
   border-radius: 20px;
+
+  padding: 10%;
+}
+.card-container {
   display: flex;
   flex-direction: column;
-  padding: 10%;
+  align-items: center;
 }
 .card {
   display: flex;
@@ -67,11 +66,22 @@ import .attribution {
   background: beige;
   border-radius: 10%;
   margin: 2%;
+  min-width: 175px;
+}
+.card div {
+  display: flex;
 }
 .button {
   border-radius: 20px;
   background: linear-gradient(hsl(241, 81%, 54%), hsl(241, 81%, 54%));
   padding: 8px;
   color: white;
-  max-width: 200px;
+  min-width: 200px;
+}
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
 }
