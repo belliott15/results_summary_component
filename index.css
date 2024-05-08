@@ -4,13 +4,7 @@ body {
   align-items: center;
 }
 .container {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.52);
-  border-radius: 20px;
-  margin: 10%;
-  max-width: 800px;
-  min-width: 600px;
+  display: flex;
 }
 .overall {
   background: linear-gradient(hsl(252, 100%, 67%), hsl(241, 81%, 54%));
@@ -18,7 +12,7 @@ body {
   flex-direction: column;
   align-items: center;
   border-radius: 20px;
-  justify-content: space-around;
+  justify-content: space-evenly;
   color: white;
 }
 .round {
@@ -30,29 +24,29 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  font-size: smaller;
   color: rgb(159, 159, 159);
-  box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.32);
+  box-shadow: 3px 3px 3px 0px rgba(0, 0, 0, 0.32);
 }
 .round h1 {
-  font-size: 3rem;
+  font-size: 4rem;
   margin: 0;
-  padding: 0%;
   color: white;
 }
 
 .footer {
   text-align: center;
   color: rgb(205, 203, 203);
-  max-width: 200px;
+  max-width: 50%;
+}
+.footer h1 {
+  color: white;
 }
 
 .breakdown {
   background-color: white;
-  border-radius: 20px;
-
-  padding: 10%;
+  padding-left: 5%;
 }
+
 .card-container {
   display: flex;
   flex-direction: column;
@@ -100,4 +94,24 @@ body {
 }
 .attribution a {
   color: hsl(228, 45%, 44%);
+}
+
+/* Mobile: 375px */
+/* Desktop: 1440px */
+@media all and (max-width: 600px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    min-width: 430px;
+  }
+  .breakdown {
+    justify-content: center;
+    align-items: center;
+  }
+  .card {
+    width: 50%;
+  }
 }
