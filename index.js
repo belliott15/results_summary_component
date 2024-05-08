@@ -1,9 +1,9 @@
 //Grabbing card container and data from data.json
 const cardContainer = document.querySelector(".card-container");
+const totalResult = document.querySelector("#total-result");
 const dataArray = await fetch("data.json").then((resp) => resp.json());
 
 const displayCards = () => {
-  cardContainer.textContent = "";
   for (let card of dataArray) {
     //create elements
     const singleCard = document.createElement("div");
@@ -26,6 +26,10 @@ const displayCards = () => {
     singleCard.append(individual, score);
     cardContainer.append(singleCard);
   }
+  const button = document.createElement("button");
+  button.textContent = "Continue";
+  button.classList.add("button");
+  cardContainer.append(button);
 };
 
 const calculateAverage = () => {
@@ -37,6 +41,7 @@ const calculateAverage = () => {
     totalPoints += score;
   }
   console.log(Math.round((totalPoints / pointsAvailable) * 100));
+  totalResult.textContent = Math.round((totalPoints / pointsAvailable) * 100);
 };
 
 // call display function
