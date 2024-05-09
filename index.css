@@ -35,7 +35,6 @@ body {
 .container {
   display: flex;
   flex-direction: column;
-  box-shadow: 5px 5px 5px 0px hsla(180, 4%, 11%, 0.908);
   border-radius: 20px;
 }
 
@@ -43,29 +42,27 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: space-evenly;
   background: linear-gradient(var(--Light-slate-blue), var(--Light-royal-blue));
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
-  justify-content: space-evenly;
   color: white;
   padding: 12px;
 }
+
 .round {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   background: linear-gradient(
-    45deg,
     var(--Violet-blue-circle),
     var(--Persian-blue-circle)
   );
   height: 150px;
   width: 150px;
   border-radius: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
   color: var(--Light-lavender);
-  box-shadow: 3px 3px 3px 0px var(--Dark-gray-blue);
-  margin: 8px;
 }
 .round h1 {
   font-size: 4rem;
@@ -76,7 +73,7 @@ body {
 .footer {
   text-align: center;
   color: var(--Light-gray);
-  max-width: 50%;
+  max-width: 60%;
 }
 .footer h1 {
   color: var(--White);
@@ -86,15 +83,14 @@ body {
   background-color: var(--White);
   display: flex;
   flex-direction: column;
-  padding-left: 12px;
+  padding: 0px 12px 12px 12px;
   border-radius: 20px;
 }
 
 .card-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
+  display: grid;
+  gap: 12px;
+  justify-content: center;
 }
 
 .card {
@@ -102,12 +98,14 @@ body {
   flex-direction: row;
   justify-content: space-between;
   border-radius: 10px;
-  min-width: 250px;
-  margin: 8px;
   padding: 2px 16px;
+  min-width: 250px;
 }
 .card span {
   display: flex;
+}
+.card img {
+  margin-right: 5px;
 }
 .reaction {
   color: #f55;
@@ -125,19 +123,18 @@ body {
   color: #1125d6;
   background: hsla(234, 85%, 45%, 0.1);
 }
+.card p:nth-child(2) {
+  color: black;
+}
 .button {
   border-radius: 20px;
-  background: linear-gradient(hsl(241, 81%, 54%), hsl(241, 81%, 54%));
-  padding: 8px;
+  background: linear-gradient(var(--Cobalt-blue), var(--Light-royal-blue));
+  padding: 12px;
   color: white;
-  min-width: 250px;
+  margin: 12px;
 }
 .button:hover {
   cursor: pointer;
-  background: linear-gradient(
-    hsla(241, 87%, 56%, 0.875),
-    hsla(241, 81%, 54%, 0.756)
-  );
 }
 .attribution {
   margin: 12px;
@@ -158,8 +155,9 @@ body {
   .container {
     display: flex;
     flex-direction: row;
-    height: 50%;
+    height: 60%;
     min-height: 400px;
+    box-shadow: 5px 5px 5px 0px hsla(180, 4%, 11%, 0.908);
   }
   .overall {
     border-radius: 20px;
@@ -167,8 +165,8 @@ body {
   }
   .breakdown {
     width: 50%;
-  }
-  .card-container {
-    display: flex;
+    justify-content: center;
+    align-content: center;
+    padding: 20px;
   }
 }
