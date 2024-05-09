@@ -104,6 +104,9 @@ body {
 .card span {
   display: flex;
 }
+.card img {
+  margin-right: 5px;
+}
 .reaction {
   color: #f55;
   background: rgba(255, 85, 85, 0.1);
@@ -120,19 +123,18 @@ body {
   color: #1125d6;
   background: hsla(234, 85%, 45%, 0.1);
 }
+.card p:nth-child(2) {
+  color: black;
+}
 .button {
   border-radius: 20px;
-  background: linear-gradient(hsl(241, 81%, 54%), hsl(241, 81%, 54%));
+  background: linear-gradient(var(--Cobalt-blue), var(--Light-royal-blue));
   padding: 12px;
   color: white;
   margin: 12px;
 }
 .button:hover {
   cursor: pointer;
-  background: linear-gradient(
-    hsla(241, 87%, 56%, 0.875),
-    hsla(241, 81%, 54%, 0.756)
-  );
 }
 .attribution {
   margin: 12px;

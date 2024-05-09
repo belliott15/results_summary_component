@@ -11,7 +11,7 @@ const displayCards = () => {
     const singleCard = document.createElement("div");
     const individual = document.createElement("span");
     const icon = document.createElement("img");
-    const category = document.createElement("p");
+    const category = document.createElement("h4");
     const score = document.createElement("p");
 
     //assign content for elements
