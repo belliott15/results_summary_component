@@ -18,8 +18,8 @@ const displayCards = () => {
     score.textContent = `${card.score}/100`;
 
     //assign class to elements
-    individual.classList.add(card.category.toLowerCase());
-    singleCard.classList.add("card");
+    singleCard.classList.add(`card`);
+    singleCard.classList.add(card.category.toLowerCase());
 
     //append elements
     individual.append(icon, category);
