@@ -3,7 +3,9 @@ const cardContainer = document.querySelector(".card-container");
 const totalResult = document.querySelector("#total-result");
 const dataArray = await fetch("data.json").then((resp) => resp.json());
 
+//Display summary content
 const displayCards = () => {
+  cardContainer.textContent = "";
   for (let card of dataArray) {
     //create elements
     const singleCard = document.createElement("div");
@@ -18,20 +20,31 @@ const displayCards = () => {
     score.textContent = `${card.score}/100`;
 
     //assign class to elements
-    individual.classList.add(card.category.toLowerCase());
-    singleCard.classList.add("card");
+    singleCard.classList.add(`card`);
+    singleCard.classList.add(card.category.toLowerCase());
 
     //append elements
     individual.append(icon, category);
     singleCard.append(individual, score);
     cardContainer.append(singleCard);
   }
+
+  //create a button
   const button = document.createElement("button");
-  button.textContent = "Continue";
+  button.textContent = "Randomize";
   button.classList.add("button");
   cardContainer.append(button);
+
+  button.addEventListener("click", () => {
+    for (let data of dataArray) {
+      data.score = Math.round(Math.random() * 100);
+    }
+    displayCards();
+    calculateAverage();
+  });
 };
 
+//Use scores to determine total value and place it in overall section
 const calculateAverage = () => {
   const pointsAvailable = dataArray.length * 100;
   let totalPoints = 0;
