@@ -38,6 +38,7 @@ body {
   border-radius: 20px;
 }
 
+/* right side */
 .overall {
   display: flex;
   flex-direction: column;
@@ -49,7 +50,6 @@ body {
   color: white;
   padding: 12px;
 }
-
 .round {
   display: flex;
   flex-direction: column;
@@ -69,7 +69,6 @@ body {
   margin: 0;
   color: var(--White);
 }
-
 .footer {
   text-align: center;
   color: var(--Light-gray);
@@ -79,6 +78,7 @@ body {
   color: var(--White);
 }
 
+/* left side */
 .breakdown {
   background-color: var(--White);
   display: flex;
@@ -86,13 +86,11 @@ body {
   padding: 0px 12px 12px 12px;
   border-radius: 20px;
 }
-
 .card-container {
   display: grid;
   gap: 12px;
   justify-content: center;
 }
-
 .card {
   display: flex;
   flex-direction: row;
@@ -136,6 +134,8 @@ body {
 .button:hover {
   cursor: pointer;
 }
+
+/* bottom footer */
 .attribution {
   margin: 12px;
   font-size: 11px;
